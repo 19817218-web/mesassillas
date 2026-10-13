@@ -1,0 +1,25 @@
+{
+  "name": "mesas-sillas-backend",
+  "version": "1.0.0",
+  "description": "Sistema de gestión, reserva, préstamo y devolución de mesas y sillas",
+  "main": "src/app.js",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "db:schema": "node src/utils/runSchema.js",
+    "db:migrate": "node src/utils/runSchema.js migrations/001_pagos_simulados.sql"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0"
+  }
+}
